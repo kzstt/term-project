@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="../public/style.css" />
+  </head>
+  <body>
+    <div class="login-body">
+      <h1>Register</h1>
+      <form id="registerForm" action="/register" method="POST">
+        <div class="group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+
+        <div class="group">
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" required />
+        </div>
+
+        <div class="group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+
+        <button class="btn" type="submit">Register</button>
+      </form>
+    </div>
+  </body>
+</html>
