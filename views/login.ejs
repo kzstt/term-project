@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Login Form</title>
-    <link rel="stylesheet" href="../public/style.css" />
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <div class="login-body">
@@ -19,7 +19,13 @@
         </div>
 
         <button class="btn" type="submit">Login</button>
+        <p>Don't have an account yet?</p>
+        <a href="/register">Register here</a>
+        <% if (typeof error !== 'undefined') { %>
+          <p class="error"><%= error %></p>
+        <% } %>
       </form>
     </div>
   </body>
 </html>
+
