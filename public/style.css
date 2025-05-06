@@ -283,3 +283,7 @@ form {
     margin-bottom: 1.5rem;
     box-shadow: 1 1px 3px black;
   }
+.error {
+  color: red;
+  font-weight: bold;
+}
