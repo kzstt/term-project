@@ -55,6 +55,9 @@ router.post("/login", async (req, res) => {
         id: row.id,
         username: row.username
       };
+      if(!comparePassword){
+        return res.render('login', {error: 'Incorrect password'});
+      }
       if(comparePassword){
       res.redirect("/");
     }
