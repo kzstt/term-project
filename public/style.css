@@ -264,9 +264,20 @@ form {
     flex-direction: column;
     align-items: center;
 }
+    .faq-form-wrapper h2 {
+      font-size: 1.6em;
+      margin-bottom: 10px;
+    }
+
 .faq-form textarea {
-    width: 100%;
-    height: 450px;
+  width: 100%;
+  max-width: 600px;
+  height: 180px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  margin-bottom: 15px;
 }
 .checkout {
     display: flex;
