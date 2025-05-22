@@ -13,7 +13,7 @@ const db = new sqlite3.Database(
     if (err) {
       return console.error("Error opening database", err.message);
     }
-    console.log("Connected to todos database");
+    console.log("Connected to login database");
   }
 );
 
@@ -51,13 +51,13 @@ router.post("/login", async (req, res) => {
         return res.render('login', {error: 'Account does not exist'});
       }
       const comparePassword = await bcrypt.compare(password, row.password);
+      if(!comparePassword){
+        return res.render('login', {error: 'Incorrect password'});
+      }
       req.session.user = {
         id: row.id,
         username: row.username
       };
-      if(!comparePassword){
-        return res.render('login', {error: 'Incorrect password'});
-      }
       if(comparePassword){
       res.redirect("/");
     }
