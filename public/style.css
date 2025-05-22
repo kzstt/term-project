@@ -27,14 +27,6 @@ img {
   height: auto;
 }
 
-/* header {
-  background: linear-gradient(90deg, #00c6ff, #0072ff);
-  color: #fff;
-  text-align: center;
-  padding: 20px 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-} */
-
 header h1 {
   font-size: 2.5em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
@@ -106,8 +98,8 @@ header .subheader {
   width: 60%;
   max-width: 300px;
   background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
 }
 
@@ -149,6 +141,29 @@ header .subheader {
   border: 3px solid #ccc;
   border-radius: 5px;
   max-width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.images:hover {
+  transform: scale(1.03);
+}
+
+.details-btn {
+  background-color: black;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.details-btn:hover {
+  background-color: #333;
 }
 
 footer {
@@ -156,7 +171,6 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -169,7 +183,6 @@ footer i {
   padding: 0 10px;
   color: #fff;
 }
-
 
 @media (max-width: 760px) {
   .burger {
@@ -189,7 +202,6 @@ footer i {
   .navlist .search input {
     width: 100%;
   }
-
   .container {
     flex-direction: column-reverse;
   }
@@ -199,7 +211,6 @@ footer i {
   .images {
     max-width: 100%;
   }
-
   .par {
     width: 90%;
   }
@@ -222,8 +233,6 @@ footer i {
   }
 }
 
-
-/* view files css */
 .login-body {
   display: flex;
   flex-direction: column;
@@ -242,32 +251,35 @@ form {
   flex-direction: column;
   gap: 1rem;
 }
+
 .group {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .btn {
-    min-width: 100px;
-    max-width: 200px;
-    width: 15%;
-    align-self: center;
+  min-width: 100px;
+  max-width: 200px;
+  width: 15%;
+  align-self: center;
 }
+
 .faq-form {
-    box-shadow: none;
-    border: none;
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-    .faq-form-wrapper h2 {
-      font-size: 1.6em;
-      margin-bottom: 10px;
-    }
+
+.faq-form-wrapper h2 {
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
 
 .faq-form textarea {
   width: 100%;
@@ -279,25 +291,29 @@ form {
   font-size: 1em;
   margin-bottom: 15px;
 }
+
 .checkout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
 }
+
 .cart-items {
-    padding: 1rem;
-    border: 1px solid black;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 1.5rem;
-    box-shadow: 1 1px 3px black;
-  }
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  box-shadow: 1 1px 3px black;
+}
+
 .error {
   color: red;
   font-weight: bold;
 }
+
 .product-detail {
   max-width: 800px;
   margin: 40px auto;
@@ -307,6 +323,7 @@ form {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   text-align: center;
 }
+
 .product-detail img {
   max-width: 100%;
   max-height: 400px;
@@ -316,6 +333,7 @@ form {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
 .product-detail-image {
   max-width: 100%;
   max-height: 400px;
@@ -327,3 +345,4 @@ form {
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
 }
+
