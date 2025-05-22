@@ -1,4 +1,4 @@
 # term-project
 term-project
 
-[Glitch Server](https://sneaky-typhoon-flier.glitch.me)
+[Glitch Server](https://nutritious-lily-mat.glitch.me)
