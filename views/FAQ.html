@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FAQ form</title>
-    <link rel="stylesheet" href="../public/style.css" />
+    <title>FAQ</title>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
     <div class="login-body">
-      <h1>FAQ</h1>
-      <form id="faqForm" class="faq-form" action="/faq" method="POST">
-        
-          <label for="question">Ask us anything:</label>
-          <textarea name="question" id="question" placeholder="Type Question here..." required></textarea>
+      <h1>Frequently Asked Questions</h1>
 
+      <div class="faq-form faq-static">
+        <div class="faq-item">
+          <h3>What payment methods do you accept?</h3>
+          <p>This is a demo site with a mocked checkout. No actual payment is needed.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Do you offer real shipping?</h3>
+          <p>No, this project is for educational purposes. All features are simulated.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can I return products?</h3>
+          <p>There is no real fulfillment. You can remove items from your cart at any time.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Is my data safe?</h3>
+          <p>Passwords are hashed using bcrypt. This project follows basic security best practices.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Who built this site?</h3>
+          <p>This site was developed by students as part of a college project.</p>
+        </div>
+      </div>
+
+      <h2>Ask Us Anything</h2>
+      <form id="faqForm" class="faq-form" action="/faq" method="POST">
+        <label for="question">Your Question:</label>
+        <textarea name="question" id="question" placeholder="Type your question here..." required></textarea>
         <button class="btn" type="submit">Submit</button>
       </form>
     </div>
