@@ -24,3 +24,7 @@ logs
 
 # Environment variables
 .env*
+
+# Data files
+/data/
+.db
