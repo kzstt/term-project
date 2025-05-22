@@ -3,44 +3,112 @@
   <head>
     <title>FAQ</title>
     <link rel="stylesheet" href="/style.css" />
+    <style>
+      body {
+        background: #f0f8ff;
+        font-family: "Roboto", sans-serif;
+      }
+
+      .faq-container {
+        max-width: 800px;
+        margin: 60px auto;
+        padding: 30px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .faq-item {
+        margin-bottom: 30px;
+        text-align: left;
+      }
+
+      .faq-item h3 {
+        margin-bottom: 10px;
+        color: #111;
+      }
+
+      .faq-item p {
+        color: #444;
+        line-height: 1.5;
+      }
+
+      .faq-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+      }
+
+      .faq-form label {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .faq-form textarea {
+        width: 100%;
+        max-width: 600px;
+        height: 180px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 1em;
+        margin-bottom: 15px;
+      }
+
+      .faq-form button {
+        background: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .faq-form button:hover {
+        background: #333;
+      }
+    </style>
   </head>
   <body>
-    <div class="login-body">
+    <div class="faq-container">
       <h1>Frequently Asked Questions</h1>
 
-      <div class="faq-form faq-static">
-        <div class="faq-item">
-          <h3>What payment methods do you accept?</h3>
-          <p>This is a demo site with a mocked checkout. No actual payment is needed.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Do you offer real shipping?</h3>
-          <p>No, this project is for educational purposes. All features are simulated.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Can I return products?</h3>
-          <p>There is no real fulfillment. You can remove items from your cart at any time.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Is my data safe?</h3>
-          <p>Passwords are hashed using bcrypt. This project follows basic security best practices.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Who built this site?</h3>
-          <p>This site was developed by students as part of a college project.</p>
-        </div>
+      <div class="faq-item">
+        <h3>What payment methods do you accept?</h3>
+        <p>This is a demo site with a mocked checkout. No actual payment is needed.</p>
       </div>
 
-      <h2>Ask Us Anything</h2>
-      <form id="faqForm" class="faq-form" action="/faq" method="POST">
-        <label for="question">Your Question:</label>
-        <textarea name="question" id="question" placeholder="Type your question here..." required></textarea>
-        <button class="btn" type="submit">Submit</button>
-      </form>
+      <div class="faq-item">
+        <h3>Do you offer real shipping?</h3>
+        <p>No, this project is for educational purposes. All features are simulated.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I return products?</h3>
+        <p>There is no real fulfillment. You can remove items from your cart at any time.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Is my data safe?</h3>
+        <p>Passwords are hashed using bcrypt. This project follows basic security best practices.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Who built this site?</h3>
+        <p>This site was developed by students as part of a college project.</p>
+      </div>
+
+      <div class="faq-form-wrapper">
+        <h2 style="margin-top: 40px; margin-bottom: 20px;">Ask Us Anything</h2>
+        <form id="faqForm" class="faq-form" action="/faq" method="POST">
+          <div style="width: 100%; max-width: 600px; text-align: left;">
+            <label for="question"><strong>Your Question:</strong></label>
+          </div>
+          <textarea name="question" id="question" placeholder="Type your question here..." required></textarea>
+          <button class="btn" type="submit">Submit</button>
+        </form>      
     </div>
   </body>
 </html>
