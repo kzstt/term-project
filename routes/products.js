@@ -24,20 +24,20 @@ const db = new sqlite3.Database(path.join(__dirname, "../data/products.db"), (er
             }
 
             // db.get("SELECT COUNT(*) AS count FROM products", (err,row) => {
-                    const insertQuary = "INSERT INTO products (name, description, price, image) VALUES (?, ?, ?, ?)";
-                    const products = [
-                        ["Product 1", "Description", 10.99, "product1.jpg"],
-                        ["Product 2", "Description", 10.99, "product2.jpg"],
-                        ["Product 3", "Description", 10.99, "product3.jpg"],
-                        ["Product 4", "Description", 10.99, "product4.jpg"],
-                        ["Product 5", "Description", 10.99, "product5.jpg"],
-                        ["Product 6", "Description", 10.99, "product6.jpg"],
-                        ["Product 7", "Description", 10.99, "product7.jpg"],
-                        ["Product 8", "Description", 10.99, "product8.jpg"],
-                        ["Product 9", "Description", 10.99, "product9.jpg"],
-                        ["Product 10", "Description", 10.99, "product10.jpg"],
-                        ["Product 11", "Description", 10.99, "product11.jpg"],
-                        ["Product 12", "Description", 10.99, "product12.jpg"],
+              const insertQuery = "INSERT INTO products (name, description, price, image) VALUES (?, ?, ?, ?)";
+              const products = [
+                  ["Custom Gaming PC", "High-performance PC built for gaming with modern components and RGB lighting.", 1599.99, "custom-gaming-pc.jpg"],
+                  ["Home & Office PC", "Reliable desktop ideal for everyday home and office tasks.", 749.99, "home-office-pc.jpg"],
+                  ["Workstation & Server", "Powerful workstation optimized for rendering, computation, and server use.", 2299.99, "workstation-server.jpg"],
+                  ["CPU (Processor)", "A fast and efficient central processing unit, ideal for multitasking and performance.", 399.99, "cpu.jpg"],
+                  ["GPU (Graphics Card)", "Advanced graphics card to handle demanding visuals and high-resolution rendering.", 699.99, "gpu.jpg"],
+                  ["SSD (Solid State Drive)", "High-speed solid-state drive for fast boot times and file access.", 129.99, "ssd.jpg"],
+                  ["PC Case", "Durable and stylish mid-tower case with cable management features.", 89.99, "pc-case.jpg"],
+                  ["Memory (RAM)", "Fast and reliable RAM module for smooth multitasking and gaming.", 119.99, "ram.jpg"],
+                  ["Power Supply Unit (PSU)", "Efficient and quiet PSU to power your entire PC build.", 109.99, "psu.jpg"],
+                  ["Motherboard", "Versatile and feature-rich motherboard supporting modern CPUs and peripherals.", 199.99, "motherboard.jpg"],
+                  ["Cooling System", "Effective air or liquid cooling to maintain low CPU and GPU temperatures.", 89.99, "cooling.jpg"],
+                  ["Peripheral Bundle", "Complete bundle including keyboard, mouse, and headset for a full setup.", 149.99, "peripheral.jpg"]
                     ];
                     // Insert products into products.db
                     (function insertProducts(index = 0) {
@@ -45,7 +45,7 @@ const db = new sqlite3.Database(path.join(__dirname, "../data/products.db"), (er
                           return;
                         }
                       
-                        db.run(insertQuary, products[index], (err) => {
+                        db.run(insertQuery, products[index], (err) => {
                           if (err) {
                             console.error("Error inserting product:", err.message);
                           }
