@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/profile.css" />
   </head>
   <body>
+    <div class="center">
     <div class="product-detail">
       <h1><%= product.name %></h1>
       <img src=" /images/ <%= product.image %>" alt="<%= product.name %>" />
@@ -17,6 +18,7 @@
         <input type="hidden" name="productId" value="<%= product.id %>">
         <button type="submit">Add to Cart</button>
       </form>
+      </div>
     </div>
   </body>
 </html>
