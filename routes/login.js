@@ -95,13 +95,13 @@ router.post("/register", async (req, res) => {
 });
 
 // check users
-router.get("/users", (req, res) => {
-  db.all("SELECT * FROM users", [], (err, rows) => {
-    if (err) {
-      return res.status(500).send(err.message);
-    }
-    res.json(rows);
-  });
-});
+// router.get("/users", (req, res) => {
+//   db.all("SELECT * FROM users", [], (err, rows) => {
+//     if (err) {
+//       return res.status(500).send(err.message);
+//     }
+//     res.json(rows);
+//   });
+// });
 
 module.exports = router;
