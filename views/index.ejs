@@ -11,12 +11,6 @@
     />
   </head>
   <body>
-    <!-- <header>
-      <h1 class="center">Website Name</h1>
-      <p class="subheader">
-        a
-      </p>
-    </header> -->
     <div class="page">
       <nav class="navbar">
         <ul class="navlist">
@@ -24,133 +18,36 @@
           <li class="search">
             <input type="search" name="q" placeholder="Search for..." />
           </li>
-          <!-- <li><a href="/login">Register/Login</a></li> -->
            <% if(user) {%> 
             <li><a href="/profile">Hello, <%= user.username %></a></li>
-            <!-- <li>
-              <form action="/logout" method="POST" style="display: inline;">
-                <button type="submit" class="logout-btn">Logout</button>
-              </form>
-            </li> -->
             <% } else { %>
               <li><a href="/login">Register/Login</a></li>
             <% } %>
           <li><a href="/orders">Returns & Orders</a></li>
           <li>
-            <a href="/cart"><i class="fa-solid fa-cart-shopping"></i>Cart </a>
+            <a href="/cart"><i class="fa-solid fa-cart-shopping"></i> Cart (<%= cartCount %>)</a>
           </li>
         </ul>
       </nav>
 
       <div class="card-wrapper">
-        <section class="par">
-          <div class="container">
-      
-            <img src="" class="images" alt="image of product 1" />
-    
-            <div class="text-block">
-              <h2 class="heading">Product 1</h2>
-              <p class="para">info of product 1</p>
-            </div>
-            <button>Add to cart</button>
-          </div>
-        </section>
-
-        <section class="par">
-          <div class="container">
-            <img src="" class="images" alt="image of product 2" />
-            <div class="text-block">
-              <h2 class="heading">Product 2</h2>
-              <p class="para">info about product 2</p>
-            </div>
-            <button>Add to cart</button>
-          </div>
-        </section>
-
-        <section class="par">
-          <div class="container">
-            <img src="" class="images" alt="image of product 3" />
-            <div class="text-block">
-              <h2 class="heading">Product 3</h2>
-              <p class="para">info about product 3</p>
-            </div>
-            <button class="cart-btn">Add to cart</button>
-          </div>
-        </section>
-
-        <section class="par">
-          <div class="container">
-            <img src="" class="images" alt="image of product 4 " />
-            <div class="text-block">
-              <h2 class="heading">Product 4</h2>
-              <p class="para">info about product 4</p>
-            </div>
-            <button class="cart-btn">Add to cart</button>
-          </div>
-        </section>
-
-        <section class="par">
-          <div class="container">
-            <img src="" class="images" alt="image of product 5" />
-            <div class="text-block">
-              <h2 class="heading">Product 5</h2>
-              <p class="para">info about product 5</p>
-            </div>
-            <button class="cart-btn">Add to cart</button>
-          </div>
-        </section>
-
-        <section class="par">
-          <div class="container">
-            <img src="" class="images" alt="image of product 6" />
-            <div class="text-block">
-              <h2 class="heading">Product 6</h2>
-              <p class="para">info about product 6</p>
-            </div>
-            <button class="cart-btn">Add to cart</button>
-          </div>
-        </section>
-        <section class="par">
+        <% products.forEach(product => {
+          %>
+          <section class = "par">
             <div class="container">
-              <img src="" class="images" alt="image of product 7" />
+              <img src="/images/ <%= product.image %>" class="images" alt="<%= product.name%>" />
               <div class="text-block">
-                <h2 class="heading">Product 7</h2>
-                <p class="para">info about product 7</p>
+                <h2 class="heading"><%= product.name %></h2>
+                <p class="para"><%= product.description %></p>
+                <p class="price">$<%= product.price.toFixed(2) %></p>
+                <a href="/product/<%= product.id %>">
+                  <button class="details-btn">View Details</button>
+                </a>
               </div>
-              <button class="cart-btn">Add to cart</button>
             </div>
           </section>
-          <section class="par">
-            <div class="container">
-              <img src="" class="images" alt="image of product 8" />
-              <div class="text-block">
-                <h2 class="heading">Product 8</h2>
-                <p class="para">info about product 8</p>
-              </div>
-              <button class="cart-btn">Add to cart</button>
-            </div>
-          </section>
-          <section class="par">
-            <div class="container">
-              <img src="" class="images" alt="image of product 9" />
-              <div class="text-block">
-                <h2 class="heading">Product 9</h2>
-                <p class="para">info about product 9</p>
-              </div>
-              <button class="cart-btn">Add to cart</button>
-            </div>
-          </section>
-          <section class="par">
-            <div class="container">
-              <img src="" class="images" alt="image of product 10" />
-              <div class="text-block">
-                <h2 class="heading">Product 10</h2>
-                <p class="para">info about product 10</p>
-              </div>
-              <button class="cart-btn">Add to cart</button>
-            </div>
-          </section>
-        <!-- testing  -->
+          <% }) %>
+        
       </div>
     </div>
     <footer>
