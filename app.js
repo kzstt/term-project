@@ -70,6 +70,11 @@ app.get('/cart', (req, res) => {
   res.render('cart', { cart: req.session.cart });
 });
 
+//FAQ
+app.get('/FAQ', (req, res) => {
+  res.render('FAQ')
+})
+
 
 
 app.post('/logout', (req, res) => {
